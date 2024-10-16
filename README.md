@@ -29,15 +29,13 @@ Reasoning: I have worked with Gorilla Mux before and know it is used within the 
 
 *Install Docker: https://docs.docker.com/engine/install/
 
-*Install Gorilla Mux: ( after Go has been installed and within a Cmd / Terminal ) ```go get -u github.com/gorilla/mux```
+*Install Gorilla Mux: ( after Go has been installed and within a Cmd / Terminal ) 
+
+```go get -u github.com/gorilla/mux```
 
 ## Without Docker:
 
-*Install Go
-
-```
-go get -u github.com/gorilla/mux
-```
+*Install Go and Gorilla Mux
 
 *Open CMD / Terminal
 
