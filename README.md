@@ -1,20 +1,5 @@
-# Development Choices:
-
-Programming Language: Go / Golang
-
-Reasoning: I have prior experience with multiple languages / web-frameworks that could be used here ( such as Go, PHP, Django / Python ), but I know Go is built for web services, scales well, and is optimized for concurrency. I also know that Fetch uses Go for some of its backend servers and services.
-
-Development Environment: Visual Studio Code
-
-Reasoning: It is open source, has plenty of support for many languages and frameworks, and I am used to it.
-
-Other Tools: Docker
-
-Reasoning: I've used Docker before and it works well for ensuring a quick deployment, testing, and compatibility. It also means that the user does not have to worry about setting anything else up or troubleshooting dependencies since it is run in pre-configured internal VM.
-
-Libraries / Dependencies: Gorilla Mux
-
-Reasoning: I have worked with Gorilla Mux before and know it is used within the industry as an HTTP router for Go web servers.
+#About
+* Developed with Go 1.23, using Gorilla Mux as a HTTP Router, and Docker as a packaging / delivery tool. See the summary.txt file for more.
 
 
 # User Guide:
