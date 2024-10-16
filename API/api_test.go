@@ -44,7 +44,9 @@ func TestServerA(t *testing.T) {
 
 	writer := httptest.NewRecorder()
 	rawJson := `{ "payer" : "DANNON", "points" : 5000, "timestamp" : "2020-11-02T14:00:00Z" }`
-	request := httptest.NewRequest("POST", url+"add", strings.NewReader(rawJson))
+	jsonReader := strings.NewReader(rawJson)
+
+	request := httptest.NewRequest("POST", url+"add", jsonReader)
 	server.addPoints(writer, request)
 
 	writer = httptest.NewRecorder()
@@ -54,7 +56,26 @@ func TestServerA(t *testing.T) {
 	outputMap := map[string]int64{}
 	json.NewDecoder(writer.Result().Body).Decode(&outputMap)
 	t.Logf("MAP: %+v", outputMap)
-	t.Fatalf("Status Code: %d", writer.Result().StatusCode)
+	if request.Response.StatusCode != 200 {
+		t.Fatalf("Status Code: %d", writer.Result().StatusCode)
+	}
+}
+
+func TestServer_SpendToNegative(t *testing.T) {
+	addTestcases := []string{
+		`{ "payer": "DANNON", "points": -200, "timestamp": "2022-10-31T15:00:00Z" }`,
+		`{ "payer": "BROWN", "points": -700, "timestamp": "2022-10-31T15:00:00Z" }`,
+	}
+	for _, rawJson := range addTestcases {
+		server := NewServer()
+		writer := httptest.NewRecorder()
+		request := httptest.NewRequest("POST", "/add", bytes.NewBufferString(rawJson))
+		server.addPoints(writer, request)
+		success := writer.Result().StatusCode == 200
+		if success {
+			t.Fatalf("Error: expected status code 400, should not be able to make balance negative.")
+		}
+	}
 }
 
 func TestServer_Combined(t *testing.T) {
