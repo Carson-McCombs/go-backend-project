@@ -18,28 +18,28 @@ Reasoning: I have worked with Gorilla Mux before and know it is used within the 
 
 
 # User Guide:
-*Note, permission request might pop up for things like accessing ports and building files, please accept this requests for the program to function as intended.
+* Note, permission request might pop up for things like accessing ports and building files, please accept this requests for the program to function as intended.
 
 
 # Prerequisites:
 
-## (You might not need all of these depending on execution method):
+**(You might not need all of these depending on execution method)**
 
-*Install Go: https://go.dev/doc/install
+* Install Go: https://go.dev/doc/install
 
-*Install Docker: https://docs.docker.com/engine/install/
+* Install Docker: https://docs.docker.com/engine/install/
 
-*Install Gorilla Mux: ( after Go has been installed and within a Cmd / Terminal ) 
+* Install Gorilla Mux: ( after Go has been installed and within a Cmd / Terminal ) 
 
 ```go get -u github.com/gorilla/mux```
 
 ## Without Docker:
 
-*Install Go and Gorilla Mux
+* Install Go and Gorilla Mux
 
-*Open CMD / Terminal
+* Open CMD / Terminal
 
-*Navigate to desired directory
+* Navigate to desired directory
 
 ```
 git clone https://github.com/Carson-McCombs/go-backend-project/
@@ -50,11 +50,11 @@ go run main.go
 
 ## For Build to Execution with Docker:
 
-*Ensure that Go, Docker, and Gorilla Mux is installed
+* Ensure that Go, Docker, and Gorilla Mux is installed
 
-*Open Cmd / Terminal
+* Open Cmd / Terminal
 
-*Navigate to desired directory
+* Navigate to desired directory
 
 ```
 git clone https://github.com/Carson-McCombs/go-backend-project/
@@ -65,11 +65,11 @@ docker run -p 8000:8000 go-fetch-backend
 
 ## For Docker Image ( without Go or Gorilla Mux )
 
-*Ensure that Docker is installed and setup
+* Ensure that Docker is installed and setup
 
-*Open Cmd
+* Open Cmd
 
-*Navigate to desired folder
+* Navigate to desired folder
 
 ```
 docker pull carsonmccombs/go-fetch-backend
