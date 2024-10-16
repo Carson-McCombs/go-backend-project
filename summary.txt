@@ -1,0 +1,26 @@
+1. Why did you choose the tools, libraries, and language you used for the coding exercise?
+
+-For the programming language: I chose Go / Golang. I chose Go because it is built for web services, scales well, and is optimized for concurrency. I also know that Fetch uses Go for some of its backend servers and services.
+-For a development environment: I chose Visual Studio Code. This is because it is open source, has plenty of support for many languages and frameworks, and I am used to it.
+-For other libaries I used: I chose Gorilla Mux to use as a HTTP Router due to being used to it and it having plenty of community support and popularity for Go web servers.
+-For other tools I used: I've used Docker before and it works well for ensuring a quick deployment, testing, and compatibility. It also means that the user does not have to worry about setting anything else up or troubleshooting dependencies since it is run in pre-configured internal VM.
+
+2. What are the advantages and disadvantages of your solution?
+
+Advantages:
+-I use Docker, so my solution should work on a variety of machines with a simplified setup / install.
+-I believe that due to abstracting my data into object, my code scales up decently if there were other features added such as multiple accounts.
+-I stuck to OOP for the core of the design.
+-I rather efficient strategies ( such as storing deposits in order and using a binary insertion to keep it that way )
+-Due to abstraction, the code is a more reusable.
+-I think that my solution strikes a decent balance between keeping data abstracted into objects staying neat and efficient.
+
+Disadvantages:
+-I abstracted the data into a few layers ( i.e. Server -> Account -> Balance -> Transaction ), so you have to navigate through those layers to see what happens internally. 
+-My naming choice for "Balance" might not fully represent the object's intended function. It is intended to represent the all of the transactions grouped under a specified payer.
+-I didn't have as much of a variety of unit tests as I would've liked
+
+3. What has been a favorite school/personal project thus far? What about it that challenged you?
+-A project I've been working on for a few weeks now is a Vote Scanner. It scans the Monday Morning Quaterback Club's weekly votes, running OCR to pull header text and then using edge-detection and a Convolutional Neural Network to detect and scan their votes. I found it challenging me due to the rapid pace at which machine learning and AI is growing. 
+Some technologies that I learned about in school less than two years ago have started to fade already, some have grown their field of influence. I did find myself being challenged when some of the services that were being used introduced breaking changes a few weeks after the project was released. This caused me to opt towards more static and maintainable 
+solutions. But I think that struggle of constantly having to learn and adjust while moving forward is part of the fun. It feels very rewarding coming out on top of a difficult situation. Then, the satisfaction of being able to apply your new knowledge and skills to the next project is just icing on the cake. 
